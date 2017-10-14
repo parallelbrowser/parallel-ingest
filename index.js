@@ -35,7 +35,6 @@ class IngestDB extends EventEmitter {
 
   async open () {
     // guard against duplicate opens
-    console.log('this in open', this)
     if (this.isBeingOpened || this.level) {
       veryDebug('duplicate open, returning ready promise')
       return this._dbReadyPromise
